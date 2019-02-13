@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 865866944481956595}
   - component: {fileID: 865866944481956592}
+  - component: {fileID: 2857886721014081246}
   m_Layer: 0
-  m_Name: cannonBase
+  m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,6 +82,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2857886721014081246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865866944481956593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2531dce84cd9c439406326b137071e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CannonBarrel: {fileID: 865866944860024473}
+  CannonBall: {fileID: 8530452267698664325, guid: 762d9c6ca0b9f6247a27e58fb6600bf0,
+    type: 3}
+  ShootPoint: {fileID: 280442207403595989}
+  CannonForce: 10
 --- !u!1 &865866944516191093
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +220,7 @@ GameObject:
   - component: {fileID: 865866945203659638}
   - component: {fileID: 865866945203659639}
   m_Layer: 0
-  m_Name: CannonBody
+  m_Name: CannonBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +236,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.117, y: 0.371, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 280442207403595989}
   m_Father: {fileID: 865866944860024473}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -270,3 +289,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4252472077662207286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280442207403595989}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &280442207403595989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252472077662207286}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5142464, w: 0.85764253}
+  m_LocalPosition: {x: -0.95, y: 0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 865866945203659638}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 61.894005}
