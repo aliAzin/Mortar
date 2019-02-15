@@ -98,8 +98,9 @@ MonoBehaviour:
   CannonBall: {fileID: 8530452267698664325, guid: 762d9c6ca0b9f6247a27e58fb6600bf0,
     type: 3}
   ShootPoint: {fileID: 280442207403595989}
-  CannonForce: 10
-  Arrow: {fileID: 0}
+  CannonForce: 2
+  Arrow: {fileID: 6816306197286046893}
+  Sensivity: 0.1
 --- !u!1 &865866944516191093
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,14 +203,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865866944860024478}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.612598, w: 0.79039466}
   m_LocalPosition: {x: -0.211, y: 0.169, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 865866945203659638}
   m_Father: {fileID: 865866944481956595}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 75.555}
 --- !u!1 &865866945203659636
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,14 +235,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865866945203659636}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.117, y: 0.371, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.6121097, w: 0.79077286}
+  m_LocalPosition: {x: 0.346, y: 0.264, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 280442207403595989}
   m_Father: {fileID: 865866944860024473}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -75.484}
 --- !u!212 &865866945203659639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -315,7 +316,7 @@ Transform:
   m_GameObject: {fileID: 4252472077662207286}
   m_LocalRotation: {x: -0, y: -0, z: 0.5142464, w: 0.85764253}
   m_LocalPosition: {x: -0.95, y: 0.33, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 2415780697288548825}
   m_Father: {fileID: 865866945203659638}
@@ -337,7 +338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2415780697288548825
 Transform:
   m_ObjectHideFlags: 0
