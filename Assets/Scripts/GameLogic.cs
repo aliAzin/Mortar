@@ -1,23 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
-    public float Speed = 1;
-    public Transform LowLimit;
-    public Transform HighLimit;
-    public GameObject BoxPrefab;
 
-    IEnumerator Start()
+
+    void Update()
     {
-        while (true)
+        Target[] targets = FindObjectsOfType<Target>();
+
+        if (targets.Length == 0)
         {
-            yield return new WaitForSeconds(1/Speed);
-            Vector3 boxPosition = 
-                new Vector3( Random.Range(LowLimit.position.x,HighLimit.position.x), LowLimit.position.y, 0);
-            Instantiate(BoxPrefab, boxPosition, Quaternion.identity);
+            StartCoroutine( LoadLevelAfterSeconds(5) );
         }
     }
 
+    IEnumerator LoadLevelAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index + 1);
+
+    }
 }

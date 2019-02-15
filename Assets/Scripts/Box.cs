@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.GetComponent<CannonBall>())
-        {
-            Destroy(gameObject);
-        }
-    }
+//    void OnCollisionEnter2D(Collision2D col)
+//    {
+//        if (col.gameObject.GetComponent<CannonBall>())
+//        {
+//            Destroy(gameObject);
+//        }
+//    }
 }

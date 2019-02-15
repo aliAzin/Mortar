@@ -10,8 +10,10 @@ public class CannonBall : MonoBehaviour
     public float ExplosionMagnitute = 3;
     public float ExplosionRadius = 5;
 
-    void OnCollisionEnter2D()
+    IEnumerator Start()
     {
+        yield return new WaitForSeconds(4);
+
         GameObject explosion = Instantiate(Explosion, transform.position, Quaternion.identity);
         Destroy( gameObject );
         Destroy( explosion, 2);
@@ -28,6 +30,17 @@ public class CannonBall : MonoBehaviour
                 box.GetComponent<Rigidbody2D>().AddForce(force * ExplosionMagnitute, ForceMode2D.Impulse);
             }
         }
+
+        Target[] targets = FindObjectsOfType<Target>();
+        foreach (Target target in targets)
+        {
+            // Check if the box is in explosion radius
+            if (Vector3.Distance(target.transform.position, transform.position) < ExplosionRadius)
+            {
+                Destroy(target.gameObject);
+            }
+        }
+
 
     }
 
